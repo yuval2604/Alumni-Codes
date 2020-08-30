@@ -17,59 +17,59 @@ scope = ["https://spreadsheets.google.com/feeds", 'https://www.googleapis.com/au
          "https://www.googleapis.com/auth/drive.file", "https://www.googleapis.com/auth/drive"]
 
 ######################################################################################################
-creds = ServiceAccountCredentials.from_json_keyfile_name("creds.json", scope)
+# creds = ServiceAccountCredentials.from_json_keyfile_name("creds.json", scope)
 
-client = gspread.authorize(creds)
+# client = gspread.authorize(creds)
 
-sheet = client.open("Updated Startups").sheet1  # Open the spreadhseet
+# sheet = client.open("Updated Startups").sheet1  # Open the spreadhseet
 
-# data = sheet.get_all_records()  # Get a list of all records
+# # data = sheet.get_all_records()  # Get a list of all records
 
-# row = sheet.row_values(3)  # Get a specific row
-urls = sheet.col_values(5)  # Get a specific column
-urls = list(urls)
+# # row = sheet.row_values(3)  # Get a specific row
+# urls = sheet.col_values(5)  # Get a specific column
+# urls = list(urls)
 
 
-print(len(urls))
+# print(len(urls))
 
-#####
+# #####
 
-urls = urls[1:3]
+# urls = urls[1:3]
 #####
 
 ######################################################################################################
 
-for link in urls:
+# for link in urls:
 
-    # link = "https://finder.startupnationcentral.org/company_page/unipharm"
-    f = requests.get(link)
+link = "https://finder.startupnationcentral.org/company_page/inbal-data-processing"
+f = requests.get(link)
 
-    # print(f.text)
+# print(f.text)
 
-    soup = BeautifulSoup(f.text)  # make soup that is parse-able by bs
-    CEO_link = soup.find(
-        'div', class_='team-member-cards-wrapper js-team-member-carousel').find('a', href=True)['href']
-    # f = requests.get(CEO_link)
+soup = BeautifulSoup(f.text)  # make soup that is parse-able by bs
+CEO_link = soup.find(
+    'div', class_='team-member-cards-wrapper js-team-member-carousel').find('a', href=True)['href']
+# f = requests.get(CEO_link)
 
 ######################################################################################################
-    webbrowser.get('chrome').open_new_tab(CEO_link)  # open in chrome
+webbrowser.get('chrome').open_new_tab(CEO_link)  # open in chrome
 
-    # webbrowser.open_new_tab(CEO_link) -> safari
+# webbrowser.open_new_tab(CEO_link) -> safari
 
-    pyautogui.moveRel(x=1559, y=56, duration=0.25)
-    time.sleep(2)
+pyautogui.moveRel(1527, 79, duration=0.25)
+time.sleep(2)
 
-    pyautogui.click(x=1559, y=56, button='left')
-    time.sleep(2)
+pyautogui.click(x=1527, y=79, button='left')
+time.sleep(2)
 
-    pyautogui.click(x=1544, y=197, button='left')
-    time.sleep(3)
+pyautogui.click(x=1514, y=220, button='left')
+time.sleep(3)
 
-    pyautogui.click(x=1226, y=296, button='left')
+pyautogui.click(x=1192, y=319, button='left')
 
-    emails.append(pyperclip.paste())
+emails.append(pyperclip.paste())
 
-    print(emails)
+print(emails)
 
 
 # soup = BeautifulSoup(f.text)

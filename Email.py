@@ -24,7 +24,7 @@ df_emails = sheet.col_values(3)  # Get a specific column
 
 Hr_Companies = set(['CV-Naor.peeri@ls-techs.com', 'Jennyb@elipse-eng.com', 'Job@in-touch.co.il', 'Jobs@Net-Bet.net',
                     'Kenigsman.eli.jobs@gmail.com', 'jobs', 'anatlz@sela.co.il', 'apply.37.81B@applynow.io', 'neta@gtech.co.il', 'adiya@bpsoft.co.il', 'shayleek@be2see.co.il', 'Ofir.Goldberg@ness-tech.co.il', 'Ortal.E@top-soft.co.il', 'hr.team@herolo.co.il',
-
+                    'sqlink', 'herolo', 'malam', 'aman'
                     ])
 s = set()
 
@@ -32,5 +32,3 @@ s = set()
 
 s = set([x[2:-2] for x in df_emails if not any(e in x for e in Hr_Companies)])
 # s.remove('[]')
-
-print(len(s))
