@@ -41,7 +41,7 @@ scope = ["https://spreadsheets.google.com/feeds", 'https://www.googleapis.com/au
 
 # for link in urls:
 
-link = "https://finder.startupnationcentral.org/company_page/inbal-data-processing"
+link = "https://finder.startupnationcentral.org/company_page/netafim"
 f = requests.get(link)
 
 # print(f.text)

@@ -24,7 +24,12 @@ df_emails = sheet.col_values(3)  # Get a specific column
 
 Hr_Companies = set(['CV-Naor.peeri@ls-techs.com', 'Jennyb@elipse-eng.com', 'Job@in-touch.co.il', 'Jobs@Net-Bet.net',
                     'Kenigsman.eli.jobs@gmail.com', 'jobs', 'anatlz@sela.co.il', 'apply.37.81B@applynow.io', 'neta@gtech.co.il', 'adiya@bpsoft.co.il', 'shayleek@be2see.co.il', 'Ofir.Goldberg@ness-tech.co.il', 'Ortal.E@top-soft.co.il', 'hr.team@herolo.co.il',
-                    'sqlink', 'herolo', 'malam', 'aman'
+                    'sqlink', 'herolo', 'malam', 'aman', 'Hiring', 'hr', "8200ac", "devalore", "asperii",
+                    "log-on", "intuit", "odin-team", "ictbit", "peeri",
+                    "ls-techs", "applynow", "esr", "cps", "be2see", "sqlink",
+                    "hitech", "experis", "compie", "elipse-eng",
+                    "malam", "datacube",
+                    "sela", "one1", "spread-out", "matrix"
                     ])
 s = set()
 
