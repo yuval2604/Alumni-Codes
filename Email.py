@@ -14,6 +14,7 @@ creds = ServiceAccountCredentials.from_json_keyfile_name("creds.json", scope)
 client = gspread.authorize(creds)
 
 sheet = client.open("Facebook Posts").sheet1  # Open the spreadhseet
+# sheet = client.open("Yuval Beiser Leads").sheet1  # Open the spreadhseet
 
 data = sheet.get_all_records()  # Get a list of all records
 

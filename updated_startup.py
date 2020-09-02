@@ -41,7 +41,7 @@ scope = ["https://spreadsheets.google.com/feeds", 'https://www.googleapis.com/au
 
 # for link in urls:
 
-link = "https://finder.startupnationcentral.org/company_page/netafim"
+link = "https://finder.startupnationcentral.org/company_page/hisense-medical"
 f = requests.get(link)
 
 # print(f.text)
@@ -56,16 +56,16 @@ webbrowser.get('chrome').open_new_tab(CEO_link)  # open in chrome
 
 # webbrowser.open_new_tab(CEO_link) -> safari
 
-pyautogui.moveRel(1527, 79, duration=0.25)
+pyautogui.moveTo(1368, 96, duration=0.25)
 time.sleep(2)
 
-pyautogui.click(x=1527, y=79, button='left')
+pyautogui.click(x=1368, y=96, button='left')
 time.sleep(2)
 
-pyautogui.click(x=1514, y=220, button='left')
+pyautogui.click(x=1349, y=235, button='left')
 time.sleep(3)
 
-pyautogui.click(x=1192, y=319, button='left')
+pyautogui.click(x=1063, y=281, button='left')
 
 emails.append(pyperclip.paste())
 
