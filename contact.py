@@ -8,7 +8,7 @@ import pandas as pd
 path = '/Users/user/PycharmProjects/soldgame/fun/Alumni-Codes/FaceEmails.xlsx'
 file_errors_location = 'FacebookPosts.xlsx'
 df = pd.read_excel(file_errors_location)
-emails = df['emails']  # emails col
+emails = df['Emails']  # emails col
 
 Names = []
 Companies = []
@@ -69,7 +69,7 @@ creds = ServiceAccountCredentials.from_json_keyfile_name("creds.json", scope)
 client = gspread.authorize(creds)
 
 sheet = client.open("Yuval Beiser Leads").sheet1  # Open the spreadhseet
-k = 76
+k = 77
 for i in range(len(Names)):
     sheet.update_cell(i+k, 9, Names[i])  # names_f
     sheet.update_cell(i+k, 8, Final_emails[i])  # emails_f
